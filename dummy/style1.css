@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Europa';
+}
+.container{
+    width: 100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(covid.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 5%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 12%;
+    width: 100%;
+    display:flex;
+    align-items: center;
+}
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+.menu-icon{
+    width:70px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+nav{
+    flex:1;
+    text-align: right;
+    margin-right: 37px;
+}
+nav ul li{
+    list-style:none;
+    display: inline-block;
+    margin-left: 40px;
+    padding: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13;
+}
+.row{
+    display: flex;
+    height: 80%;
+    align-items: center;
+}
+.col .a{
+    width: 100%;
+    margin-left: 12%;
+    align-items: right;
+    
+}
+h1{
+    color: #fff;
+    font-size: 40px;
+    width: 400px
+}
+h2{
+    color: aqua;
+    font-size: 15px;
+    padding-top: 10px;
+    line-height: 20px;
+    font-family: cursive;
+    line-height: normal;
+}
+button{
+    width: 150px;
+    color: black;
+    font-size: 15px;
+    padding: 12px 0;
+    background:#fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top:30px ;
+
+}
+button:hover{
+    background: linear-gradient(90deg,turquoise,yellow);
+    transition: 1s;
+}
+.card{
+    width: 180px;
+    height:200px;
+    display:inline-table;
+    border-radius: 20px;
+    padding:15px 15px; 
+    cursor: pointer;
+    margin: 10px 20px;
+    background-position: fill;
+    background-size: cover;
+    align-items: right;
+    transition: transform 1s;
+}
+.col-left{
+    width: 25%;
+    
+}
+
+.col .card h5{
+    color: crimson;
+    font-size: large;
+    font-family: 'Europa';
+}
+.cards{
+    text-align: center;
+    position: left;
+    /* margin-left: 12%; */
+    margin-left: 20%;
+    
+}
+.cards a{
+    display: inline-table;
+}
+.cards p{
+    text-align: left;
+    color: black;
+    font-size: large;
+}
+.col .card p{
+        color:black;
+        
+}
+.card1{
+    background-image: url(pic-1.png);
+}
+.card2{
+    background-image: url(pic-2.jpg);
+    margin-right: 20%;
+}
+.card3{
+    background-image: url(pic-3.jpg);
+}
+.card4{
+    background-image: url(pic-4.png);
+    margin-right: 20%;
+}
+.card1:hover{
+    transform:translate(-10px,-10px);
+}
+.card2:hover{
+    transform:translate(10px,-10px);
+}
+.card3:hover{
+    transform:translate(-10px,10px);
+}
+.card4:hover{
+    transform:translate(10px,10px);
+}
+li:hover{
+    background-color: yellowgreen;
+    border-radius: 30px;
+    position: relative;
+    background:linear-gradient(90deg,turquoise,yellow);
+}
+nav ul li a:hover{
+    color: black;
+}
+.a{
+    padding-left:300px;
+}
+footer{
+    padding: 20px 23px;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+}
+footer span a{
+    color:white;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+span{
+    color: red;
+    transition: 0.5s;
+}
+h5{
+    color: crimson;
+    text-align: left;
+    font-size: large;
+}
