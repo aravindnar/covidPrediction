@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid 19 Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'predict.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="{{ url_for('static',filename = 'logo.png')}}" onclick="window.location.href='/'" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="/">Home </a></li>
+                    <li><a href="predict">Predict </a></li>
+                    <li><a href="about">About </a></li>
+                    {% if 'username' not in session %}
+                    <li><a href="login">Login/Signup</a></li>
+                    {% else %}
+                    <li style="text-transform: capitalize;"><a href="logout">Hi, {{session['username']}}</a></li>
+                    {% endif %} 
+                </ul>
+            </nav>
+            <!-- <img src="Thumbnail-2-removebg-preview.png" class="menu-icon"> -->
+
+        </div>
+        <div class="predict">
+        <form method="POST">
+            <div style='display: flex'>
+            <span style="margin: 20px; line-height: 30px;">
+            <input type="checkbox" class="check-box" name="breathing"><span> &nbsp;Breathing Problem</span><br>
+            <input type="checkbox" class="check-box" name="fever"><span> &nbsp;Fever</span><br>
+            <input type="checkbox" class="check-box" name="drycough"><span> &nbsp;Dry Cough</span><br>
+            <input type="checkbox" class="check-box" name="sorethroat"><span> &nbsp;Sore Throat</span><br>
+            <input type="checkbox" class="check-box" name="runnose"><span> &nbsp;Running Nose</span><br>
+            <input type="checkbox" class="check-box" name="asthma"><span> &nbsp;Asthma</span><br>
+            </span>
+            <span style="margin: 20px; line-height: 30px;">
+            <input type="checkbox" class="check-box" name="chroniclung"><span> &nbsp;Chronic Lung</span><br>
+            <input type="checkbox" class="check-box" name="headache"><span> &nbsp;Headache</span><br>
+            <input type="checkbox" class="check-box" name="heart"><span> &nbsp;Heart Disease</span><br>
+            <input type="checkbox" class="check-box" name="diabetes"><span> &nbsp;Diabetes</span><br>
+            <input type="checkbox" class="check-box" name="hypertension"><span> &nbsp;Hyper Tension</span><br>
+            <input type="checkbox" class="check-box" name="fatigue"><span> &nbsp;Fatigue</span><br>
+            </span>
+            <span style="margin: 20px; line-height: 30px;">
+            <input type="checkbox" class="check-box" name="gastro"><span> &nbsp;Gastro Problem</span><br>
+            <input type="checkbox" class="check-box" name="abroad"><span> &nbsp;Abroad Travelled</span><br>
+            <input type="checkbox" class="check-box" name="covid"><span> &nbsp;Contacted with anyone having COVID-19</span><br>
+            <input type="checkbox" class="check-box" name="large"><span> &nbsp;Atended Large Gathering</span><br>
+            <input type="checkbox" class="check-box" name="high"><span> &nbsp;Visited highly exposed Area</span><br>
+            <input type="checkbox" class="check-box" name="public"><span> &nbsp;Family working in Public Exposed Places</span><br>
+            </span>
+            </div>
+            <input type="submit" class="button" value="Predict">
+        </form>
+    </div>
+    
+    <div class="footer">
+        <footer>
+            <span>Created by <a href="https://www.linkedin.com/in/aravindnar/">N Aravind</a> | <span class="far fa-copyright"></span>All rights reserved</span>
+        </footer>
+    </div>
+    </div>
+    
+</body>
+</html>
+

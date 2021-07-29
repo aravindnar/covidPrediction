@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid 19 Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'abt.css')}}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static',filename = 'logo.png')}}">
+</head>
+<body>
+    <div class="abt container">
+        <div class="navbar">
+        <img src="{{ url_for('static',filename = 'logo.png')}}" onclick="window.location.href='/'" class="logo">
+        <nav>
+            <ul>
+                <li><a href="/">Home </a></li>
+                <li><a href="predict">Predict </a></li>
+                <li><a href="about">About </a></li>
+                {% if 'username' not in session %}
+                <li><a href="login">Login/Signup</a></li>
+                {% else %}
+                <li style="text-transform: capitalize;"><a href="logout">Hi, {{session['username']}}</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <!-- <img src="Thumbnail-2-removebg-preview.png" class="menu-icon"> -->
+    </div>
+        <div class="contents">
+            <h1>Project Done by <span>N Aravind</span></h1>
+            <p>To prevent the spread of COVID-19:
+            Clean your hands often. Use soap and water, or an alcohol-based hand rub.
+            Maintain a safe distance from anyone who is coughing or sneezing.
+            Wear a mask when physical distancing is not possible.
+            Don’t touch your eyes, nose or mouth.
+            Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.
+            Stay home if you feel unwell.
+            If you have a fever, cough and difficulty breathing, seek medical attention.</p>
+            <p>This project was developed to predict the probability of COVID-19 by collecting the symptoms inputs from users. </p>
+        </div>
+
+    <div class="footer">
+    <footer>
+        <span>Created by <a href="https://www.linkedin.com/in/aravindnar/">N Aravind</a> | <span class="far fa-copyright"></span>All rights reserved</span>
+    </footer>
+    </div>
+    </div>
+</div>
+</body>
+</html>

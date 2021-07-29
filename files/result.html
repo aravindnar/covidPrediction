@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid 19 Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'predict.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="{{ url_for('static',filename = 'logo.png')}}" onclick="window.location.href='/'" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="http://127.0.0.1:5000">Home </a></li>
+                    <li><a href="http://127.0.0.1:5000/predict">Predict </a></li>
+                    <li><a href="http://127.0.0.1:5000/about">About </a></li>
+                    {% if 'username' not in session %}
+                    <li><a href="http://127.0.0.1:5000/login">Login/Signup</a></li>
+                    {% else %}
+                    <li style="text-transform: capitalize;"><a href="http://127.0.0.1:5000/logout">Hi, {{session['username']}}</a></li>
+                    {% endif %} 
+                </ul>
+            </nav>
+            <!-- <img src="Thumbnail-2-removebg-preview.png" class="menu-icon"> -->
+
+        </div>
+        <div class="predict" style="width: 360px;">
+        {% if res == '0' %}
+            <h3 style="position: absolute;top: 50%;left: 50%;transform:translate(-50%,-50%);text-align:center;padding:10px 30px;width: 360px;">Your chances of having Covid-19 is Less.</h3>
+        {% else %}
+            <h3 style="position: absolute;top: 50%;left: 50%;transform:translate(-50%,-50%);text-align:center;padding:10px 30px;width: 360px;">Your chances of having Covid-19 is High. <br> Please get tested.</h3>
+        {% endif %}
+    </div>
+    
+    <div class="footer">
+        <footer>
+            <span>Created by <a href="https://www.linkedin.com/in/aravindnar/">N Aravind</a> | <span class="far fa-copyright"></span>All rights reserved</span>
+        </footer>
+    </div>
+    </div>
+    
+</body>
+</html>
+

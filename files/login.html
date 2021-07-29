@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid 19 Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'login.css')}}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static',filename = 'logo.png')}}">
+</head>
+<body>
+    
+    <div class="hero container">
+        <div class="navbar">
+            <img src="{{ url_for('static',filename = 'logo.png')}}" onclick="window.location.href='/'" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="/">Home </a></li>
+                    <li><a href="predict">Predict </a></li>
+                    <li><a href="about">About </a></li>
+                </ul>
+            </nav>
+            <!-- <img src="Thumbnail-2-removebg-preview.png" class="menu-icon"> -->
+        </div>
+        <div class="footer">
+            <footer>
+                <span>Created by <a href="https://www.linkedin.com/in/aravindnar/">N Aravind</a> | <span class="far fa-copyright"></span>All rights reserved</span>
+            </footer>
+        </div>
+        <div class="formbox">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="signup()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SignUp</button>
+            </div>
+            <form id="login" class="input-group" method="POST">
+            <input type="text" class="input-field" name="unl" placeholder="username" required>
+            <input type="password" class="input-field" name="psl" placeholder="********" required>
+            <input type="submit" class="submit-btn" value="Login" name="button">
+            </form>
+            <form id="signup" class="input-group" method="POST">
+                <input type="text" class="input-field" name="un" placeholder="Set Username" required>
+                <input type="text" class="input-field" name="ps"placeholder="Set Password" required>
+                <input type="checkbox" class="check-box" ><span>I agree to all terms and conditions</span>
+                <input type="submit" class="submit-btn" value="Register" name="button">
+                </form>
+        </div>
+        
+    </div> 
+    <script>
+        var x=document.getElementById("login");
+        var y=document.getElementById("signup");
+        var z=document.getElementById("btn");
+
+        function signup(){
+            x.style.left="-400px";
+            y.style.left="50px";
+            z.style.left="110px";
+        }
+        function login(){
+            x.style.left="50px";
+            y.style.left="450px";
+            z.style.left="0px";
+        }
+
+    </script>
+    
+
+    
+</body>
+</html>
